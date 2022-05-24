@@ -5,7 +5,23 @@
       <map>
         <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/drawable/bg_material.xml" value="0.196" />
         <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/drawable/bg_ripple.xml" value="0.196" />
-        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_calendar.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_calendar.xml" value="0.4" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_mix.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_multi.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_progress.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_range.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_simple.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_single.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_solay.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_test.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_view_pager.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/custom_week_bar.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/english_week_bar.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/fragment_pager.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/item_list_article.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/item_list_article_group.xml" value="0.1671195652173913" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/item_list_string.xml" value="0.1671195652173913" />
       </map>
     </option>
   </component>
