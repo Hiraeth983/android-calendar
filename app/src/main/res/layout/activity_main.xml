@@ -784,6 +784,7 @@
         android:src="@mipmap/ic_24"
         android:clickable="true"
         app:elevation="10dp"
+        app:tint="@color/add_schedule_background"
         app:fabSize="mini"
         android:contentDescription="currentDay"/>
 
