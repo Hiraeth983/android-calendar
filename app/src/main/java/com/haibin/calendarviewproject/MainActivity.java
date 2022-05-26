@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 
 import androidx.appcompat.app.AlertDialog;
 
+import android.content.Intent;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.haibin.calendarview.Calendar;
 import com.haibin.calendarview.CalendarLayout;
 import com.haibin.calendarview.CalendarView;
@@ -29,6 +31,7 @@ import com.haibin.calendarviewproject.multi.MultiActivity;
 import com.haibin.calendarviewproject.pager.ViewPagerActivity;
 import com.haibin.calendarviewproject.progress.ProgressActivity;
 import com.haibin.calendarviewproject.range.RangeActivity;
+import com.haibin.calendarviewproject.schedule.ScheduleActivity;
 import com.haibin.calendarviewproject.simple.SimpleActivity;
 import com.haibin.calendarviewproject.single.SingleActivity;
 import com.haibin.calendarviewproject.solay.SolarActivity;
@@ -60,12 +63,18 @@ public class MainActivity extends BaseActivity implements
     CalendarView mCalendarView;
 
     RelativeLayout mRelativeTool;
+
     private int mYear;
+
     CalendarLayout mCalendarLayout;
 
     private AlertDialog mMoreDialog;
 
     private AlertDialog mFuncDialog;
+
+    private FloatingActionButton mCurrentDay;
+
+    private FloatingActionButton mAddScheduleFloatButton;
 
     @Override
     protected int getLayoutId() {
@@ -82,6 +91,27 @@ public class MainActivity extends BaseActivity implements
 
         mRelativeTool = findViewById(R.id.rl_tool);
         mCalendarView = findViewById(R.id.calendarView);
+
+        // 设置当前日期定位悬浮按钮监听事件
+        mCurrentDay = findViewById(R.id.currentDay);
+        mCurrentDay.hide();
+        mCurrentDay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mCalendarView.scrollToCurrent();
+                mCurrentDay.hide();
+            }
+        });
+
+        // 设置新建日程悬浮按钮监听事件
+        mAddScheduleFloatButton = findViewById(R.id.addSchedule);
+        mAddScheduleFloatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ScheduleActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //mCalendarView.setRange(2018, 7, 1, 2019, 4, 28);
         mTextCurrentDay = findViewById(R.id.tv_current_day);
@@ -391,6 +421,7 @@ public class MainActivity extends BaseActivity implements
         mYear = calendar.getYear();
         if (isClick) {
             Toast.makeText(this, getCalendarText(calendar), Toast.LENGTH_SHORT).show();
+            mCurrentDay.show();
         }
 //        Log.e("lunar "," --  " + calendar.getLunarCalendar().toString() + "\n" +
 //        "  --  " + calendar.getLunarCalendar().getYear());

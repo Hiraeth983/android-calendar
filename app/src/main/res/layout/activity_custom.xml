@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -75,7 +75,7 @@
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerInside"
                 android:src="@mipmap/ic_calendar"
-                android:tint="#000000" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/tv_current_day"
@@ -95,6 +95,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#fff"
+        android:layout_marginTop="52dp"
         android:orientation="vertical"
         app:calendar_content_view_id="@+id/recyclerView">
 
@@ -149,5 +150,35 @@
 
     </com.haibin.calendarview.CalendarLayout>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/add_schedule_background"
+        android:src="@mipmap/ic_add"
+        android:clickable="true"
+        app:elevation="10dp"
+        app:fabSize="mini"
+        android:contentDescription="addSchedule"/>
 
-</LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/currentDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/bg_ripple"
+        android:clickable="true"
+        android:contentDescription="currentDay"
+        android:src="@mipmap/ic_1"
+        app:elevation="10dp"
+        app:fabSize="mini"
+        app:tint="@color/add_schedule_background" />
+
+</RelativeLayout>

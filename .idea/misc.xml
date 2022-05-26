@@ -17,7 +17,7 @@
         <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_multi.xml" value="0.1671195652173913" />
         <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_progress.xml" value="0.1671195652173913" />
         <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_range.xml" value="0.1671195652173913" />
-        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_schedule.xml" value="0.20652173913043478" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_schedule.xml" value="0.264" />
         <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_schedule_add.xml" value="0.264" />
         <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_simple.xml" value="0.1671195652173913" />
         <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/activity_single.xml" value="0.1671195652173913" />
@@ -31,6 +31,8 @@
         <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/item_list_article_group.xml" value="0.1671195652173913" />
         <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/item_list_string.xml" value="0.1671195652173913" />
         <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/app/src/main/res/layout/solar_week_bar.xml" value="0.20652173913043478" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/calendarview/src/main/res/layout/cv_layout_calendar_view.xml" value="0.25364583333333335" />
+        <entry key="..\:/workspace/AndroidStudioWorkSpace/CalendarView-master/calendarview/src/main/res/layout/cv_week_bar.xml" value="0.25364583333333335" />
       </map>
     </option>
   </component>

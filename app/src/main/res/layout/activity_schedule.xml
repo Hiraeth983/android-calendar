@@ -9,51 +9,32 @@
     android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@+id/rl_tool"
+        android:id="@+id/rl_tool_show"
         android:layout_width="match_parent"
         android:layout_height="50dp">
 
         <ImageView
-            android:id="@+id/cancel"
+            android:id="@+id/back"
             android:layout_width="50dp"
-            android:layout_height="25dp"
+            android:layout_height="30dp"
             android:layout_centerVertical="true"
             android:background="@drawable/bg_ripple"
             android:padding="4dp"
             android:paddingLeft="16dp"
-            android:src="@mipmap/ic_cancel"
+            android:src="@mipmap/ic_back"
             app:tint="@color/black" />
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/title_schedule"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_toRightOf="@id/cancel"
+            android:layout_toRightOf="@id/back"
             android:gravity="center_vertical"
             android:paddingLeft="5dp"
-            android:text="新建日程"
+            android:text="日程"
             android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold" />
-
-        <FrameLayout
-            android:id="@+id/fl_current"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/bg_ripple">
-
-            <ImageView
-                android:id="@+id/agree"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/app_name"
-                android:scaleType="centerInside"
-                android:src="@mipmap/ic_agree" />
-
-        </FrameLayout>
 
     </RelativeLayout>
 
@@ -72,26 +53,22 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_margin="15dp"
-                android:src="@mipmap/ic_title"></ImageView>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/schedule_title"
+                <TextView
+                    android:id="@+id/title_show"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_margin="15dp"
-                    android:background="@null"
-                    android:hint="主题" />
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="left|center"
+                    android:text="标题"
+                    android:textColor="@color/add_schedule_background"
+                    android:textSize="18dp" />
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -108,34 +85,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_margin="15dp"
-                android:src="@mipmap/ic_locate" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <EditText
-                    android:id="@+id/locate"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_margin="15dp"
-                    android:background="@null"
-                    android:hint="地点" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#E4E4E4" />
-
-            </LinearLayout>
-
+            <TextView
+                android:id="@+id/begin_show"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="left|center"
+                android:text="开始：5月25日 10:00"
+                android:textColor="#b3b3b3"
+                android:textSize="18dp" />
 
         </LinearLayout>
 
@@ -144,193 +106,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_margin="15dp"
-                android:src="@mipmap/ic_begin"></ImageView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/time_slot"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:layout_toLeftOf="@+id/time_slot_switch"
-                        android:gravity="left|center"
-                        android:text="全天"
-                        android:textColor="@color/black"
-                        android:textSize="18dp" />
-
-                    <Switch
-                        android:id="@+id/time_slot_switch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:thumbTint="@color/switch_color"
-                        android:trackTint="@color/switch_color"></Switch>
-
-                </RelativeLayout>
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#E4E4E4" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_margin="15dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/begin"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:layout_toLeftOf="@+id/begin_time"
-                        android:gravity="left|center"
-                        android:text="开始"
-                        android:textColor="@color/black"
-                        android:textSize="18dp" />
-
-
-                    <TextView
-                        android:id="@+id/begin_time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:layout_toLeftOf="@+id/begin_time_spinner"
-                        android:gravity="left|center"
-                        android:text="5月25日 上午10:30"
-                        android:textColor="#b3b3b3"
-                        android:textSize="18dp" />
-
-                    <ImageButton
-                        android:id="@+id/begin_time_spinner"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="15dp"
-                        android:background="@color/white"
-                        android:scaleType="fitXY"
-                        android:src="@mipmap/ic_right" />
-
-
-                </RelativeLayout>
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#E4E4E4" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_margin="15dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/end"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:layout_toLeftOf="@+id/end_time"
-                        android:gravity="left|center"
-                        android:text="结束"
-                        android:textColor="@color/black"
-                        android:textSize="18dp" />
-
-
-                    <TextView
-                        android:id="@+id/end_time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:layout_toLeftOf="@+id/end_time_spinner"
-                        android:gravity="left|center"
-                        android:text="5月25日 下午13:00"
-                        android:textColor="#b3b3b3"
-                        android:textSize="18dp" />
-
-                    <ImageButton
-                        android:id="@+id/end_time_spinner"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="15dp"
-                        android:background="@color/white"
-                        android:scaleType="fitXY"
-                        android:src="@mipmap/ic_right" />
-                </RelativeLayout>
-
-            </LinearLayout>
+            <TextView
+                android:id="@+id/end_show"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="left|center"
+                android:text="结束：5月25日 13:00"
+                android:textColor="#b3b3b3"
+                android:textSize="18dp" />
 
         </LinearLayout>
 
@@ -368,7 +156,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/repeat"
+                        android:id="@+id/repeat_show"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_alignParentLeft="true"
@@ -376,7 +164,7 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginBottom="15dp"
-                        android:layout_toLeftOf="@+id/repeat_select"
+                        android:layout_toLeftOf="@+id/repeat_select_show"
                         android:gravity="left|center"
                         android:text="重复"
                         android:textColor="@color/black"
@@ -384,20 +172,20 @@
 
 
                     <TextView
-                        android:id="@+id/repeat_select"
+                        android:id="@+id/repeat_select_show"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
-                        android:layout_toLeftOf="@+id/repeat_select_spinner"
+                        android:layout_toLeftOf="@+id/repeat_select_spinner_show"
                         android:gravity="left|center"
                         android:text="不重复"
                         android:textColor="#b3b3b3"
                         android:textSize="18dp" />
 
                     <ImageButton
-                        android:id="@+id/repeat_select_spinner"
+                        android:id="@+id/repeat_select_spinner_show"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_alignParentRight="true"
@@ -431,7 +219,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
                 android:layout_margin="15dp"
-                android:src="@mipmap/ic_sigh"></ImageView>
+                android:src="@mipmap/ic_sigh"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -443,27 +231,27 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/time_slot"
+                        android:id="@+id/important_show"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginBottom="15dp"
-                        android:layout_toLeftOf="@+id/time_slot_switch"
+                        android:layout_toLeftOf="@+id/important_switch_show"
                         android:gravity="left|center"
                         android:text="重要提醒"
                         android:textColor="@color/black"
                         android:textSize="18dp" />
 
                     <Switch
-                        android:id="@+id/time_slot_switch"
+                        android:id="@+id/important_switch_show"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:thumbTint="@color/switch_color"
-                        android:trackTint="@color/switch_color"></Switch>
+                        android:trackTint="@color/switch_color"/>
 
                 </RelativeLayout>
 
@@ -508,7 +296,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/account"
+                        android:id="@+id/account_show"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_alignParentLeft="true"
@@ -516,7 +304,7 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginBottom="15dp"
-                        android:layout_toLeftOf="@+id/account_select"
+                        android:layout_toLeftOf="@+id/account_select_show"
                         android:gravity="left|center"
                         android:text="账户"
                         android:textColor="@color/black"
@@ -524,20 +312,20 @@
 
 
                     <TextView
-                        android:id="@+id/account_select"
+                        android:id="@+id/account_select_show"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
-                        android:layout_toLeftOf="@+id/account_select_spinner"
+                        android:layout_toLeftOf="@+id/account_select_spinner_show"
                         android:gravity="left|center"
                         android:text="我的日历"
                         android:textColor="#b3b3b3"
                         android:textSize="18dp" />
 
                     <ImageButton
-                        android:id="@+id/account_select_spinner"
+                        android:id="@+id/account_select_spinner_show"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_alignParentRight="true"
@@ -557,6 +345,47 @@
                     android:background="#E4E4E4" />
 
             </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="15dp"
+                android:src="@mipmap/ic_description" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/description_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="left|center"
+                    android:text="说明"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E4E4E4" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
@@ -582,7 +411,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
                 android:layout_margin="15dp"
-                android:src="@mipmap/ic_description" />
+                android:src="@mipmap/ic_locate" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -590,12 +419,12 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/locate"
+                    android:id="@+id/locate_show"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_margin="15dp"
                     android:background="@null"
-                    android:hint="说明" />
+                    android:hint="地点" />
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -630,7 +459,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/time_zone"
+                        android:id="@+id/time_zone_show"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_alignParentLeft="true"
@@ -638,7 +467,7 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginBottom="15dp"
-                        android:layout_toLeftOf="@+id/repeat_select"
+                        android:layout_toLeftOf="@+id/repeat_select_show"
                         android:gravity="left|center"
                         android:text="时区"
                         android:textColor="@color/black"
@@ -646,20 +475,20 @@
 
 
                     <TextView
-                        android:id="@+id/time_zone_select"
+                        android:id="@+id/time_zone_select_show"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
-                        android:layout_toLeftOf="@+id/time_zone_select_spinner"
+                        android:layout_toLeftOf="@+id/time_zone_select_spinner_show"
                         android:gravity="left|center"
                         android:text="GMT+8:00 中国标准时间"
                         android:textColor="#b3b3b3"
                         android:textSize="18dp" />
 
                     <ImageButton
-                        android:id="@+id/time_zone_select_spinner"
+                        android:id="@+id/time_zone_select_spinner_show"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_alignParentRight="true"
