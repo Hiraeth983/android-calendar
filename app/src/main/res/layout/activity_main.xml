@@ -7,7 +7,7 @@
     android:background="#ffffff"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.haibin.calendarviewproject.MainActivity"
+    tools:context="com.haibin.calendar.MainActivity"
     tools:ignore="RtlHardcoded,HardcodedText,RtlSymmetry,SmallSp">
 
 
@@ -87,7 +87,7 @@
                 android:layout_height="match_parent"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerInside"
-                android:src="@mipmap/ic_calendar"
+                android:src="@mipmap/ic_schedule"
                 android:tint="#000000" />
 
             <TextView

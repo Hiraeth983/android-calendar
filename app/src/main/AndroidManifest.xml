@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.haibin.calendarviewproject">
+    package="com.haibin.calendar">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <application
@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.haibin.calendar.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,22 +21,22 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".meizu.MeiZuActivity" />
-        <activity android:name=".multi.MultiActivity" />
-        <activity android:name=".index.IndexActivity" />
-        <activity android:name=".simple.SimpleActivity" />
-        <activity android:name=".range.RangeActivity" />
-        <activity android:name=".colorful.ColorfulActivity" />
-        <activity android:name=".solay.SolarActivity" />
-        <activity android:name=".single.SingleActivity" />
-        <activity android:name=".progress.ProgressActivity" />
-        <activity android:name=".custom.CustomActivity" />
-        <activity android:name=".mix.MixActivity" />
-        <activity android:name=".pager.ViewPagerActivity" />
-        <activity android:name=".full.FullActivity" />
-        <activity android:name=".TestActivity" />
-        <activity android:name=".CalendarActivity" />
-        <activity android:name=".schedule.ScheduleActivity" />
+        <activity android:name="com.haibin.calendar.meizu.MeiZuActivity" />
+        <activity android:name="com.haibin.calendar.multi.MultiActivity" />
+        <activity android:name="com.haibin.calendar.index.IndexActivity" />
+        <activity android:name="com.haibin.calendar.simple.SimpleActivity" />
+        <activity android:name="com.haibin.calendar.range.RangeActivity" />
+        <activity android:name="com.haibin.calendar.colorful.ColorfulActivity" />
+        <activity android:name="com.haibin.calendar.solay.SolarActivity" />
+        <activity android:name="com.haibin.calendar.single.SingleActivity" />
+        <activity android:name="com.haibin.calendar.progress.ProgressActivity" />
+        <activity android:name="com.haibin.calendar.custom.CustomActivity" />
+        <activity android:name="com.haibin.calendar.mix.MixActivity" />
+        <activity android:name="com.haibin.calendar.pager.ViewPagerActivity" />
+        <activity android:name="com.haibin.calendar.full.FullActivity" />
+        <activity android:name="com.haibin.calendar.TestActivity" />
+        <activity android:name="com.haibin.calendar.CalendarActivity" />
+        <activity android:name="com.haibin.calendar.schedule.ScheduleActivity" />
     </application>
 
 </manifest>

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="#ffffff"
     android:fitsSystemWindows="true"
-    tools:context="com.haibin.calendarviewproject.MainActivity"
+    tools:context="com.haibin.calendar.MainActivity"
     tools:ignore="RtlHardcoded,HardcodedText,RtlSymmetry,SmallSp">
 
 
@@ -75,7 +75,7 @@
                 android:tint="#000000"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerInside"
-                android:src="@mipmap/ic_calendar" />
+                android:src="@mipmap/ic_schedule" />
 
             <TextView
                 android:id="@+id/tv_current_day"
@@ -130,7 +130,7 @@
             app:month_view_show_mode="mode_only_current"
             app:year_view_scheme_color="#f17706"/>
 
-        <com.haibin.calendarviewproject.group.GroupRecyclerView
+        <com.haibin.calendar.group.GroupRecyclerView
             android:id="@+id/recyclerView"
             app:group_background="@color/content_background"
             app:group_center="false"

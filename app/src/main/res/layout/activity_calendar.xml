@@ -72,7 +72,7 @@
                 android:layout_height="match_parent"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerInside"
-                android:src="@mipmap/ic_calendar"
+                android:src="@mipmap/ic_schedule"
                 app:tint="#000000" />
 
             <TextView

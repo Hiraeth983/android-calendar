@@ -7,7 +7,7 @@
     android:background="#ffffff"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.haibin.calendarviewproject.MainActivity"
+    tools:context="com.haibin.calendar.MainActivity"
     tools:ignore="RtlHardcoded,HardcodedText,RtlSymmetry,SmallSp">
 
 
@@ -74,7 +74,7 @@
                 android:layout_height="match_parent"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerInside"
-                android:src="@mipmap/ic_calendar"
+                android:src="@mipmap/ic_schedule"
                 android:tint="#000000" />
 
             <TextView
@@ -130,7 +130,7 @@
             app:year_view_month_text_size="20sp"
             app:year_view_scheme_color="#f17706" />
 
-        <com.haibin.calendarviewproject.pager.CalendarLinearLayout
+        <com.haibin.calendar.pager.CalendarLinearLayout
             android:id="@+id/linearLayout"
             android:orientation="vertical"
             android:elevation="0dp"
@@ -155,7 +155,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/content_background" />
 
-        </com.haibin.calendarviewproject.pager.CalendarLinearLayout>
+        </com.haibin.calendar.pager.CalendarLinearLayout>
     </com.haibin.calendarview.CalendarLayout>
 
 

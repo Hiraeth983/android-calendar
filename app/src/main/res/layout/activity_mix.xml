@@ -7,7 +7,7 @@
     android:background="#ffffff"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.haibin.calendarviewproject.MainActivity"
+    tools:context="com.haibin.calendar.MainActivity"
     tools:ignore="RtlHardcoded,HardcodedText,RtlSymmetry,SmallSp">
 
 
@@ -74,7 +74,7 @@
                 android:layout_height="match_parent"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerInside"
-                android:src="@mipmap/ic_calendar"
+                android:src="@mipmap/ic_schedule"
                 android:tint="#000000" />
 
             <TextView
@@ -133,7 +133,7 @@
             app:year_view_week_text_color="#e1e1e1"
             app:year_view_week_text_size="6sp" />
 
-        <com.haibin.calendarviewproject.group.GroupRecyclerView
+        <com.haibin.calendar.group.GroupRecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
